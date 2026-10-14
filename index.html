@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive atlas of μ-opioid receptor biased-signaling research, scaffold families, assay activity, and clinical maturity." />
+  <title>MOR Biased Signaling Atlas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="authors.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav><a class="brand" href="#top"><span>μ</span> MOR Atlas</a><div class="navlinks"><a href="#map">研究图谱</a><a href="#timeline">年度演化</a><a href="#families">家族目录</a><a class="lang" href="en.html">EN</a></div></nav>
+    <div class="hero-grid" id="top">
+      <div>
+        <p class="eyebrow">μ-OPIOID RECEPTOR BIASED SIGNALING</p>
+        <h1>从文献网络到化学支架的<br><em>交互式研究图谱</em></h1>
+        <p class="lede">整合文献计量、实验平台、化学多样性和临床转化阶段，帮助研究者快速识别活跃家族、证据密度与转化路径。</p>
+        <div class="authors"><strong>Bo Chen · Yizhou Liu · Chengyi Wang · Tao Chen · Xiao Wang</strong><span>嘉兴市第一人民医院</span></div>
+        <a class="cta" href="#map">探索 29 个支架家族 <span>↓</span></a>
+      </div>
+      <div class="hero-orbit" aria-hidden="true"><div class="ring r1"></div><div class="ring r2"></div><div class="core">MOR<small>OPRM1</small></div><i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="metrics" aria-label="研究概览">
+      <article><strong>257</strong><span>纳入文献</span><small>2008–2026</small></article>
+      <article><strong>375</strong><span>化合物记录</span><small>374 个完成家族映射</small></article>
+      <article><strong>408</strong><span>实验层级记录</span><small>G protein 与 β-arrestin</small></article>
+      <article><strong>29</strong><span>人工校订支架家族</span><small>MF-01 至 MF-29</small></article>
+    </section>
+
+    <section class="section" id="map">
+      <div class="section-head"><div><p class="eyebrow">CHEMICAL SPACE</p><h2>化学多样性与研究活跃度</h2><p>气泡面积代表家族中的化合物数量，颜色代表最高临床阶段。点击气泡查看家族详情。</p></div><div class="filters" id="stageFilters"></div></div>
+      <div class="viz-card bubble-layout">
+        <div class="chart-wrap"><canvas id="bubbleChart" aria-label="支架家族化学多样性气泡图"></canvas><div class="axis-y">研究活跃度 log10(文献数 + 1)</div><div class="axis-x">家族内支架多样性</div></div>
+        <aside class="detail" id="detailPanel"><p class="detail-kicker">SELECT A FAMILY</p><h3>点击任意气泡</h3><p>查看代表性化合物、文献数量、支架丰富度和临床成熟度。</p></aside>
+      </div>
+      <p class="note">临床阶段按家族中最先进的化合物标记；轮廓用于区分偏向性驱动的临床项目与传统药物。该分类不表示家族内所有化合物均达到相同阶段。</p>
+    </section>
+
+    <section class="section slate" id="timeline">
+      <div class="section-head"><div><p class="eyebrow">TEMPORAL EVOLUTION</p><h2>主要关联文献的年度分布</h2><p>每个色块表示某支架家族在相应年份的主要关联文献数。2026 年为不完整年度。</p></div><label class="sorter">排序<select id="heatSort"><option value="id">家族编号</option><option value="total">文献总数</option><option value="recent">近年活跃度</option></select></label></div>
+      <div class="heat-card"><div class="heatmap" id="heatmap"></div><div class="scale"><span>0</span><i></i><span>较高</span></div></div>
+    </section>
+
+    <section class="section" id="families">
+      <div class="section-head"><div><p class="eyebrow">SCAFFOLD DIRECTORY</p><h2>支架家族目录</h2><p>搜索或筛选后，点击表格行可同步定位气泡图中的家族。</p></div><div class="search"><input id="search" type="search" placeholder="搜索家族、代表化合物或编号" /><select id="basisFilter"><option value="all">全部成熟度依据</option><option value="bias">偏向性项目</option><option value="conventional">传统或非偏向性药物</option><option value="preclinical">临床前</option></select></div></div>
+      <div class="table-wrap"><table><thead><tr><th>家族</th><th>名称</th><th>代表化合物</th><th>化合物</th><th>主要文献</th><th>最高阶段</th></tr></thead><tbody id="familyRows"></tbody></table></div>
+    </section>
+
+    <section class="method">
+      <p class="eyebrow">HOW TO READ THIS ATLAS</p><h2>三个维度回答三个不同问题</h2>
+      <div class="method-grid"><article><b>01</b><h3>化学多样性</h3><p>以家族内唯一 Bemis–Murcko 支架之间的平均 Morgan/Tanimoto 距离衡量。</p></article><article><b>02</b><h3>研究活跃度</h3><p>采用 log10(唯一关联文献数 + 1)，减少高度活跃家族对坐标尺度的支配。</p></article><article><b>03</b><h3>临床成熟度</h3><p>记录家族中最高阶段，同时区分偏向性项目与传统药物带来的成熟度。</p></article></div>
+    </section>
+  </main>
+  <footer><div><strong>μ MOR Atlas</strong><p>Data frozen: literature 25 Aug 2026 · clinical status 20 Sep 2026</p></div><p>基于论文配套数据构建 · 仅用于研究展示</p></footer>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>

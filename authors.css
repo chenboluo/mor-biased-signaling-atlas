@@ -1,0 +1,18 @@
+.authors {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px 0 2px;
+  color: #dcebe5;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.authors strong {
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+.authors span {
+  color: #aac9bd;
+}
