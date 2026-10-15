@@ -1,0 +1,75 @@
+# Web of Science Search Strategy (v0.1)
+
+# Database: Web of Science Core Collection
+
+# Entitlements:
+
+- WOS.IC: 2010 to 2026
+- WOS.CCR: 2010 to 2026
+- WOS.SCI: 1975 to 2026
+- WOS.AHCI: 1975 to 2026
+- WOS.BHCI: 2010 to 2026
+- WOS.BSCI: 2010 to 2026
+- WOS.ESCI: 2006 to 2026
+- WOS.ISTP: 1990 to 2026
+- WOS.SSCI: 1975 to 2026
+- WOS.ISSHP: 1990 to 2026
+
+
+# Searches:
+
+1: TS=(
+  "mu opioid receptor*" OR
+  "mu-opioid receptor*" OR
+  "MOP receptor*" OR
+  "mu opioid agonist*" OR
+  "mu-opioid agonist*" OR
+  OPRM1
+)
+AND
+TS=(
+  "biased agonis*" OR
+  "biased ligand*" OR
+  "biased signal*" OR
+  "signaling bias" OR
+  "signalling bias" OR
+  "pathway bias*" OR
+  "functional selectiv*" OR
+  "ligand-directed signal*" OR
+  "ligand directed signal*" OR
+  "ligand-directed functional selectiv*" OR
+  "agonist-directed signal*" OR
+  "agonist directed signal*" OR
+  "agonist-selective signal*" OR
+  "agonist selective signal*" OR
+  "agonist-selective traffick*" OR
+  "ligand-selective traffick*" OR
+  "G protein bias*" OR
+  "G-protein bias*" OR
+  "G protein-biased" OR
+  "G-protein-biased" OR
+  "G protein preferr*" OR
+  "G-protein preferr*" OR
+  "beta-arrestin bias*" OR
+  "beta arrestin bias*" OR
+  "arrestin bias*" OR
+  "arrestin-sparing" OR
+  "arrestin sparing" OR
+  "differential signal*" OR
+  "differential traffick*"
+)				Date Run: Tue Aug 25 2026 18:55:13 GMT+0800 (中国标准时间)		Results: 596
+
+2: TS=(
+  "mu opioid receptor*" OR
+  "mu-opioid receptor*" OR
+  "MOP receptor*" OR
+  "mu opioid agonist*" OR
+  "mu-opioid agonist*" OR
+  OPRM1
+)				Date Run: Tue Aug 25 2026 18:55:13 GMT+0800 (中国标准时间)		Results: 15320
+
+3: #1 AND #2				Date Run: Tue Aug 25 2026 18:55:14 GMT+0800 (中国标准时间)		Results: 596
+
+4: #1 AND #2 and Article (Document Types)				Date Run: Tue Aug 25 2026 18:57:50 GMT+0800 (中国标准时间)		Results: 399
+
+5: #1 AND #2 and Article (Document Types) and English (Languages)				Date Run: Tue Aug 25 2026 18:58:05 GMT+0800 (中国标准时间)		Results: 399

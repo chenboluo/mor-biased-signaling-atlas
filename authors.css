@@ -1,18 +1,1 @@
-.authors {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin: 20px 0 2px;
-  color: #dcebe5;
-  font-size: 13px;
-  line-height: 1.55;
-}
-
-.authors strong {
-  font-weight: 700;
-  letter-spacing: 0.015em;
-}
-
-.authors span {
-  color: #aac9bd;
-}
+.authors{display:flex;flex-direction:column;gap:4px;margin-top:24px;font-size:9px;line-height:1.6;color:#99b19f}.authors strong{font-weight:400;letter-spacing:.15px;color:#b1c3af}.authors span{font-size:9px;color:#8fa896}@media(max-width:850px){.authors{font-size:8px;margin-top:20px}.authors span{font-size:8px}}@media(max-width:650px){.authors{font-size:8px;gap:4px;margin-top:23px}.authors span{font-size:8px}}@media print{.authors,.authors strong,.authors span{color:#526f54}}

@@ -1,0 +1,40 @@
+/* Interactive evidence views; shared by both language editions. */
+.family-bar[aria-pressed="true"]{background:#e8f1eb;outline:2px solid #34725c;outline-offset:-2px}
+.family-bar-fill{display:block;height:100%;min-width:2px;background:#43856c;border-radius:2px}
+.family-bar-track{display:block;background:#e5ece7;height:7px;border-radius:2px;overflow:hidden}
+.family-bar{width:100%;text-align:left;cursor:pointer}
+.scatter-svg{display:block;width:100%;height:auto;min-height:310px;font:12px system-ui,sans-serif}
+.scatter-svg text{fill:#62746a}.scatter-svg .dot-label{font-size:10px;fill:#223e30}
+.scatter-point{cursor:pointer;outline:none}.scatter-point:focus circle,.scatter-point:hover circle{stroke:#152f24;stroke-width:3}
+.chart-legend{display:flex;gap:14px;flex-wrap:wrap;color:#69786f;font-size:11px;padding:10px 16px}
+.chart-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.heatmap-table{border-collapse:separate;border-spacing:3px;width:100%;min-width:1050px;font-size:10px}
+.heatmap-table th{font-size:10px;padding:5px;background:transparent;white-space:nowrap;text-align:center}
+.heatmap-table th:first-child{width:67px;text-align:left;position:sticky;left:0;background:#fff;z-index:1}
+.heatmap-table td{padding:0;border:0;min-width:25px;height:23px}
+.heat-cell{width:100%;height:23px;padding:0;border:0;border-radius:2px;font:10px system-ui;cursor:pointer;color:#173e2d}
+.heat-cell:focus-visible{outline:2px solid #ae7339;outline-offset:1px}
+.record-open{border:0;background:none;padding:0;text-align:left;color:#245b46;font:inherit;cursor:pointer;font-weight:650;line-height:1.5}
+.record-open:hover{text-decoration:underline}.record-meta{display:block;margin-top:5px;color:#748177;font-size:11px;line-height:1.5}
+.record-name{max-width:360px;line-height:1.6}.record-name small{display:block}
+.record-code{font-family:ui-monospace,monospace;font-size:11px;white-space:nowrap}
+.table-actions{white-space:nowrap}.source-link{color:#2c6b51;text-underline-offset:3px;font-size:12px}
+.raw-fields{display:grid;grid-template-columns:minmax(130px,.35fr) 1fr;border-top:1px solid #dce5dd;font-size:12px;margin:12px 0 24px}
+.raw-fields dt,.raw-fields dd{margin:0;padding:10px 0;border-bottom:1px solid #e4e9e3;overflow-wrap:anywhere;line-height:1.65}
+.raw-fields dt{color:#738176;padding-right:15px}.raw-fields dd{white-space:pre-wrap}
+.source-note{color:#7a867c;font-size:11px;overflow-wrap:anywhere;line-height:1.7}
+.detail-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.detail-links button{border:1px solid #b9cfc1;background:#f3f8f3;color:#20573d;padding:9px 13px;border-radius:5px;cursor:pointer;font:inherit;font-size:12px}
+.detail-links button:hover{background:#e3f0e6}.detail-section{margin:22px 0 8px}
+.detail-section summary{cursor:pointer;font-weight:650;color:#2b5b40;padding:12px 0}
+.detail-caution{background:#faf3e6;border-left:3px solid #bd9452;padding:12px 15px;font-size:12px;line-height:1.7;color:#725a36}
+.detail-list{padding-left:19px;line-height:1.7;font-size:13px}.detail-list li{margin:9px 0}
+.dialog-content h2{font-family:Georgia,"Microsoft YaHei",serif;font-weight:500;font-size:27px;line-height:1.35;overflow-wrap:anywhere}
+.dialog-content h3{font-size:15px}.dialog-content p{line-height:1.7}.filter-hidden{display:none!important}
+.empty-state{text-align:center;padding:48px!important;color:#748276}.empty-state strong{display:block;color:#2d4a39;font-size:17px;margin-bottom:10px}
+.timeline-note{font-size:12px;color:#718174;line-height:1.6}.source-audit{padding-top:20px;font-size:12px;line-height:1.8;color:#627366}
+.family-chart{max-height:560px;overflow:auto;scrollbar-color:#b4c5b5 #f3f6ef;scrollbar-width:thin}
+.hero-description{font-size:15px}.section-heading p:not(.eyebrow){font-size:13px}.family-bar-name{font-size:12px}.section-note{font-size:12px}.authors strong,.authors span{font-size:11px}.cutoff-strip{font-size:12px}
+.source-audit summary{cursor:pointer;font-weight:600;font-size:14px;padding-bottom:10px}.source-audit{padding-bottom:25px}.source-audit ul{padding-left:20px}
+@media(max-width:600px){.raw-fields{grid-template-columns:1fr}.raw-fields dt{padding-bottom:0;border:0}.raw-fields dd{padding-top:2px}.scatter-svg{min-height:0}.chart-legend{font-size:10px}.record-name{min-width:190px}}
+@media(max-width:650px){.hero-description{font-size:14px}.metric p,.cutoff-strip,.section-note,.results-heading,.pagination,.footer-meta{font-size:11px}.filter-toolbar select,.search-field input{font-size:13px}.evidence-tabs button{font-size:12px}#evidenceTable td{font-size:12px}#evidenceTable th{font-size:11px}.record-meta,.badge{font-size:10px}.family-bar-name{font-size:11px}.family-detail p{font-size:13px}.dialog-content p{font-size:13px}.source-audit{font-size:12px}.authors strong,.authors span{font-size:10px}}
